@@ -285,7 +285,7 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
-    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Index2.cshtml" />
     <Content Include="Views\pais\Create.cshtml" />
     <Content Include="Views\pais\Delete.cshtml" />
     <Content Include="Views\pais\Details.cshtml" />
@@ -311,6 +311,10 @@
     <Content Include="Views\sucursals\Details.cshtml" />
     <Content Include="Views\sucursals\Edit.cshtml" />
     <Content Include="Views\sucursals\Index.cshtml" />
+    <Content Include="Views\Acceso\Login.cshtml" />
+    <Content Include="Views\Acceso\Registrar.cshtml" />
+    <Content Include="Views\Home\Pais.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
