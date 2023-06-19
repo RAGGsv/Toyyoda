@@ -7,7 +7,7 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using toyoda.Models;
-//si pudo se pudo burro
+
 namespace toyoda.Controllers
 {
     public class clientesController : Controller
