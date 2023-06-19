@@ -1,3 +1,4 @@
+USE MASTER
 drop database TOYYODABD;
 create database TOYYODABD;
 use toyyodabd
