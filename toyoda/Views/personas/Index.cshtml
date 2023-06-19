@@ -1,29 +1,17 @@
 ﻿@model IEnumerable<toyoda.Models.persona>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "   Lista personas";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Crear nuevos", "Create")
 </p>
 <table class="table">
     <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.idDireccion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.idTelefono)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.idCorreo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.idDocumento)
-        </th>
         <th>
             @Html.DisplayNameFor(model => model.genero)
         </th>
@@ -42,41 +30,28 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.idDireccion)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.idTelefono)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.idCorreo)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.idDocumento)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.genero)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.primerNombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.segundoNombre)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.primerApellido)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.segundoApellido)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.idPersona }) |
-            @Html.ActionLink("Details", "Details", new { id=item.idPersona }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.idPersona })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.primerNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.segundoNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.primerApellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.segundoApellido)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.idPersona }) |
+                @Html.ActionLink("Detailles", "Details", new { id = item.idPersona }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.idPersona })
+            </td>
+        </tr>
+    }
 
 </table>
