@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using toyoda.Permisos;
 
 namespace toyoda.Controllers
 {
+
+    [ValidarSesion]
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -31,5 +34,12 @@ namespace toyoda.Controllers
         {
             return View();
         }
+
+        public ActionResult CerrarSesion()
+        {
+            Session["usuarios"] = null;
+            return RedirectToAction("Login", "Acceso");
+        }
+
     }
 }
