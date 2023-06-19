@@ -1,0 +1,52 @@
+﻿@model IEnumerable<toyoda.Models.direccion>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idPais)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idCiudad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idPersona)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.direccion1)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idPais)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idCiudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idPersona)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.direccion1)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idDireccion }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idDireccion }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idDireccion })
+        </td>
+    </tr>
+}
+
+</table>

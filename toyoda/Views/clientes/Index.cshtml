@@ -1,0 +1,52 @@
+﻿@model IEnumerable<toyoda.Models.cliente>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idTipoCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idEstadoCliente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idSucursal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idPersona)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idTipoCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idEstadoCliente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idSucursal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idPersona)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idCliente }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idCliente }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idCliente })
+        </td>
+    </tr>
+}
+
+</table>
