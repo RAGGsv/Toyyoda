@@ -37,7 +37,7 @@ namespace toyoda.Controllers
 
         public ActionResult CerrarSesion()
         {
-            Session["usuarios"] = null;
+            Session["usuario"] = null;
             return RedirectToAction("Login", "Acceso");
         }
 

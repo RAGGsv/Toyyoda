@@ -11,7 +11,7 @@ namespace toyoda.Permisos
 
         public override void OnActionExecuting(ActionExecutingContext filterContext)
         {
-            if (HttpContext.Current.Session["usuarios"] == null) {
+            if (HttpContext.Current.Session["usuario"] == null) {
 
                 filterContext.Result = new RedirectResult("~/Acceso/Login");
             }
