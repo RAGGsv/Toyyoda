@@ -5,27 +5,28 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Persona</h2>
 
 <p>
     @Html.ActionLink("Crear nuevos", "Create")
 </p>
 <table class="table">
     <tr>
+
         <th>
-            @Html.DisplayNameFor(model => model.genero)
+            Primer nombre
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.primerNombre)
+            Segundo nombre
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.segundoNombre)
+            Primer apellid
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.primerApellido)
+            segundo apellido
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.segundoApellido)
+            genero
         </th>
         <th></th>
     </tr>
@@ -47,8 +48,11 @@
                 @Html.DisplayFor(modelItem => item.segundoApellido)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.genero)
+            </td>
+            <td>
                 @Html.ActionLink("Editar", "Edit", new { id = item.idPersona }) |
-                @Html.ActionLink("Detailles", "Details", new { id = item.idPersona }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.idPersona }) |
                 @Html.ActionLink("Eliminar", "Delete", new { id = item.idPersona })
             </td>
         </tr>
