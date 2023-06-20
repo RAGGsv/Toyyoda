@@ -1,0 +1,51 @@
+﻿@model toyoda.Models.sucursal
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>sucursal</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idPais)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idPais)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idCiudad)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idCiudad)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nombreSucursal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nombreSucursal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idCliente)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.idSucursal }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

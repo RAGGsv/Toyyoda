@@ -1,0 +1,52 @@
+﻿@model IEnumerable<toyoda.Models.sucursal>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idPais)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idCiudad)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nombreSucursal)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idCliente)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idPais)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idCiudad)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nombreSucursal)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idCliente)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.idSucursal }) |
+            @Html.ActionLink("Details", "Details", new { id=item.idSucursal }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.idSucursal })
+        </td>
+    </tr>
+}
+
+</table>

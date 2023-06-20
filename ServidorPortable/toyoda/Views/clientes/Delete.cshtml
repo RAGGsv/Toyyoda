@@ -1,0 +1,57 @@
+﻿@model toyoda.Models.cliente
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>cliente</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idTipoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idTipoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idEstadoCliente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idEstadoCliente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idSucursal)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idSucursal)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idPersona)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idPersona)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

@@ -1,0 +1,61 @@
+﻿@model IEnumerable<toyoda.Models.persona>
+
+@{
+    ViewBag.Title = "   Lista personas";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Personsa</h2>
+
+<p>
+    @Html.ActionLink("Crear nuevos", "Create")
+</p>
+<table class="table">
+    <tr>
+
+        <th>
+            Primer nombre
+        </th>
+        <th>
+            Segundo nombre
+        </th>
+        <th>
+            Primer apellid
+        </th>
+        <th>
+            segundo apellido
+        </th>
+        <th>
+            genero
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+
+            <td>
+                @Html.DisplayFor(modelItem => item.primerNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.segundoNombre)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.primerApellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.segundoApellido)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.genero)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.idPersona }) |
+                @Html.ActionLink("Detalles", "Details", new { id = item.idPersona }) |
+                @Html.ActionLink("Eliminar", "Delete", new { id = item.idPersona })
+            </td>
+        </tr>
+    }
+
+</table>
